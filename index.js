@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
         available_routes: ['/sensors (GET)', '/sensor (POST)', '/sensor/:id (PATCH)']
     });
 });
+
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 app.get('/sensors', (req, res) => {
     res.status(200).send({
         sensors: sensors
